@@ -41,8 +41,8 @@ col1, col2 = st.columns(2)
 
 with col1:
     # 2. Logo de la App 1 (BioCore Intelligence)
-    if os.path.exists("logo_biocore(1).png"):
-        st.image("logo_biocore(1).png", use_container_width=True)
+    if os.path.exists("logo_biocore.png"):
+        st.image("logo_biocore.png", use_container_width=True)
     
     st.markdown("#### 📊 BioCore Intelligence App")
     st.caption("Plataforma centralizada para la automatización de datos ecológicos. Permite el procesamiento avanzado de variables y visualización dinámica de indicadores clave para líneas de base e informes de cumplimiento.")
@@ -50,8 +50,8 @@ with col1:
 
 with col2:
     # 3. Logo de la App 2 (DarwinCheck)
-    if os.path.exists("logo(1).png"):
-        st.image("logo(1).png", use_container_width=True)
+    if os.path.exists("logo.png"):
+        st.image("logo.png", use_container_width=True)
         
     st.markdown("#### 🔬 DarwinCheck App")
     st.caption("Aplicación web especializada diseñada para auditar, limpiar y corregir bases de datos biológicas complejas. Optimiza los tiempos de control de calidad previos a la entrega de informes técnicos.")
