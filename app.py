@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 
 # Configuración de la página (Pestaña del navegador)
 st.set_page_config(
@@ -16,8 +17,13 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Título y subtítulo principal basado en tu web institucional
-st.title("🌱 BioCore")
+# 1. Imagen del Título Principal
+if os.path.exists("Titulo.jpg"):
+    st.image("Titulo.jpg", use_container_width=True)
+else:
+    # Si por alguna razón no se encuentra, muestra el título en texto
+    st.title("🌱 BioCore")
+
 st.subheader("Diagnóstico ecológico y automatización de datos para el SEIA")
 
 st.markdown("""
@@ -34,15 +40,21 @@ st.write("Utiliza los módulos interactivos a continuación para auditar o proce
 col1, col2 = st.columns(2)
 
 with col1:
+    # 2. Logo de la App 1 (BioCore Intelligence)
+    if os.path.exists("logo_biocore(1).png"):
+        st.image("logo_biocore(1).png", use_container_width=True)
+    
     st.markdown("#### 📊 BioCore Intelligence App")
     st.caption("Plataforma centralizada para la automatización de datos ecológicos. Permite el procesamiento avanzado de variables y visualización dinámica de indicadores clave para líneas de base e informes de cumplimiento.")
-    # El botón abre la app de monitoreo en una pestaña nueva
     st.link_button("Abrir Intelligence App 🚀", "https://biocoreintelligence.streamlit.app/", type="primary")
 
 with col2:
+    # 3. Logo de la App 2 (DarwinCheck)
+    if os.path.exists("logo(1).png"):
+        st.image("logo(1).png", use_container_width=True)
+        
     st.markdown("#### 🔬 DarwinCheck App")
     st.caption("Aplicación web especializada diseñada para auditar, limpiar y corregir bases de datos biológicas complejas. Optimiza los tiempos de control de calidad previos a la entrega de informes técnicos.")
-    # El botón abre la app de auditoría en una pestaña nueva
     st.link_button("Abrir DarwinCheck 🧼", "https://darwin-check.streamlit.app/", type="primary")
 
 st.markdown("---")
